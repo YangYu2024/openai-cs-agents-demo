@@ -6,6 +6,18 @@ from uuid import uuid4
 import time
 import logging
 
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Read OpenRouter API key from environment
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+
+# Import OpenRouter client to patch OpenAI calls
+import openrouter_client
+
 from main import (
     triage_agent,
     faq_agent,

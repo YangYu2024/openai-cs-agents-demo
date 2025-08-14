@@ -4,6 +4,9 @@ import random
 from pydantic import BaseModel
 import string
 
+# Import OpenRouter client to patch OpenAI calls
+import openrouter_client
+
 from agents import (
     Agent,
     RunContextWrapper,

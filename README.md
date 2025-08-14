@@ -15,17 +15,26 @@ It is composed of two parts:
 
 ## How to use
 
-### Setting your OpenAI API key
 
-You can set your OpenAI API key in your environment variables by running the following command in your terminal:
+### Setting your API key (OpenAI or OpenRouter)
 
+You can use either the OpenAI API or the OpenRouter API. To use OpenRouter, sign up at [OpenRouter](https://openrouter.ai/) and obtain your API key.
+
+Set your API key in your environment variables by running the following command in your terminal:
+
+For OpenAI:
 ```bash
-export OPENAI_API_KEY=your_api_key
+export OPENAI_API_KEY=your_openai_api_key
 ```
 
-You can also follow [these instructions](https://platform.openai.com/docs/libraries#create-and-export-an-api-key) to set your OpenAI key at a global level.
+For OpenRouter:
+```bash
+export OPENROUTER_API_KEY=your_openrouter_api_key
+```
 
-Alternatively, you can set the `OPENAI_API_KEY` environment variable in an `.env` file at the root of the `python-backend` folder. You will need to install the `python-dotenv` package to load the environment variables from the `.env` file.
+Alternatively, you can set the API key in an `.env` file at the root of the `python-backend` folder. You will need to install the `python-dotenv` package to load environment variables from the `.env` file.
+
+**Note:** You will also need to update the backend code to use the OpenRouter API endpoint and authentication method. See below for guidance.
 
 ### Install dependencies
 
@@ -34,7 +43,7 @@ Install the dependencies for the backend by running the following commands:
 ```bash
 cd python-backend
 python -m venv .venv
-source .venv/bin/activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
