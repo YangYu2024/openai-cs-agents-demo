@@ -2,12 +2,12 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![NextJS](https://img.shields.io/badge/Built_with-NextJS-blue)
-![OpenAI API](https://img.shields.io/badge/Powered_by-OpenAI_API-orange)
+![OpenRouter API](https://img.shields.io/badge/Powered_by-OpenRouter_API-orange)
 
-This repository contains a demo of a Customer Service Agent interface built on top of the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/).
+This repository contains a demo of a Customer Service Agent interface built using a custom agent system powered by OpenRouter API.
 It is composed of two parts:
 
-1. A python backend that handles the agent orchestration logic, implementing the Agents SDK [customer service example](https://github.com/openai/openai-agents-python/tree/main/examples/customer_service)
+1. A python backend that handles the agent orchestration logic, using a custom agent system built with direct OpenRouter API calls
 
 2. A Next.js UI allowing the visualization of the agent orchestration process and providing a chat interface.
 
@@ -16,25 +16,17 @@ It is composed of two parts:
 ## How to use
 
 
-### Setting your API key (OpenAI or OpenRouter)
+### Setting your OpenRouter API key
 
-You can use either the OpenAI API or the OpenRouter API. To use OpenRouter, sign up at [OpenRouter](https://openrouter.ai/) and obtain your API key.
+This demo uses OpenRouter API exclusively. Sign up at [OpenRouter](https://openrouter.ai/) and obtain your API key.
 
-Set your API key in your environment variables by running the following command in your terminal:
+Set your OpenRouter API key in your environment variables by running the following command in your terminal:
 
-For OpenAI:
-```bash
-export OPENAI_API_KEY=your_openai_api_key
-```
-
-For OpenRouter:
 ```bash
 export OPENROUTER_API_KEY=your_openrouter_api_key
 ```
 
-Alternatively, you can set the API key in an `.env` file at the root of the `python-backend` folder. You will need to install the `python-dotenv` package to load environment variables from the `.env` file.
-
-**Note:** You will also need to update the backend code to use the OpenRouter API endpoint and authentication method. See below for guidance.
+Alternatively, you can set the `OPENROUTER_API_KEY` environment variable in an `.env` file at the root of the `python-backend` folder. You will need to install the `python-dotenv` package to load environment variables from the `.env` file (already included in requirements.txt).
 
 ### Install dependencies
 

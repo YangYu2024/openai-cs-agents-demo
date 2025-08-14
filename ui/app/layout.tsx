@@ -7,10 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Airlines Agent Orchestration",
-  description: "An interface for airline agent orchestration",
-  icons: {
-    icon: "/openai_logo.svg",
-  },
+  description: "An interface for airline agent orchestration powered by OpenRouter",
+  // Removed icon reference since we're no longer using OpenAI
 };
 
 export default function RootLayout({
